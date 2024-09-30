@@ -95,6 +95,9 @@ export const [walletConnect, walletConnectHooks] = initializeConnector<WalletCon
     new WalletConnect({
       actions,
       options: {
+        rpcMap:{
+          [NETWORK_CHAIN_ID]: NETWORK_URL,
+        },
         projectId: 'c13edb0e380beb4872d04fa7dce7d169',
         chains: [NETWORK_CHAIN_ID],
         showQrModal: true,
